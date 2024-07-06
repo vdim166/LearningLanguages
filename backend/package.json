@@ -1,0 +1,28 @@
+{
+  "name": "elysia",
+  "version": "1.0.50",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "bun run --watch src/index.ts"
+  },
+  "dependencies": {
+    "@elysiajs/bearer": "^1.0.2",
+    "@elysiajs/cookie": "^0.8.0",
+    "@elysiajs/cors": "^1.0.2",
+    "@prisma/client": "^5.16.1",
+    "@types/nodemailer": "^6.4.15",
+    "dotenv": "^16.4.5",
+    "elysia": "latest",
+    "isemail": "^3.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^6.9.14",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/uuid": "^10.0.0",
+    "bun-types": "latest",
+    "prisma": "^5.16.1"
+  },
+  "module": "src/index.js"
+}
