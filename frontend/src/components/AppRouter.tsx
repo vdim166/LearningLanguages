@@ -1,15 +1,15 @@
 import { Navigate, Route, Routes } from "react-router-dom"
-import { MainPage } from "./MainPage"
 import { LoginPage } from "./LoginPage"
 import { Layout } from "./Layout"
 import { TrainWordsPage } from "./TrainWordsPage"
 import { ProfilePage } from "./ProfilePage"
+import { LearnLanguagePage } from "./LearnLanguagePage"
 
 const AppRouter = (isAuth: boolean) => {
   return isAuth ? (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<MainPage />} />
+        <Route index element={<LearnLanguagePage />} />
         <Route path="words" element={<TrainWordsPage />} />
         <Route path="profile" element={<ProfilePage />} />
         <Route path="*" element={<Navigate to="/" replace />} />

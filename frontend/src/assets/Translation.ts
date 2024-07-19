@@ -8,6 +8,8 @@ export enum TRANSLATION_KEY {
   TRAIN_WORDS = "trainWords",
   PROFILE = "profile",
   EXIT = "exit",
+  LESSON = "lesson",
+  START_LESSON = "startLesson",
 }
 
 const list = {
@@ -38,6 +40,14 @@ const list = {
   [TRANSLATION_KEY.EXIT]: {
     english: "Exit",
     russian: "Выход",
+  },
+  [TRANSLATION_KEY.LESSON]: {
+    english: "Lesson",
+    russian: "Урок",
+  },
+  [TRANSLATION_KEY.START_LESSON]: {
+    english: "Start lesson",
+    russian: "Начать урок",
   },
 }
 

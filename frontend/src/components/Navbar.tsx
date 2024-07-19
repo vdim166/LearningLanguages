@@ -25,10 +25,10 @@ export const Navbar = observer(() => {
           className="ml-2"
           width={"100px"}
         />
-        <NavLink to="/" className={`py-4 px-1 ml-1 hover:bg-gray-100 `}>
+        <NavLink to="/" className={`py-4 px-1 ml-1 hover:bg-gray-200 `}>
           {translation.translate(TRANSLATION_KEY.START_LEARNING, languageOfApp)}
         </NavLink>
-        <NavLink to="/words" className={`py-4 px-1 ml-1 hover:bg-gray-100`}>
+        <NavLink to="/words" className={`py-4 px-1 ml-1 hover:bg-gray-200`}>
           {translation.translate(TRANSLATION_KEY.TRAIN_WORDS, languageOfApp)}
         </NavLink>
       </div>
@@ -51,12 +51,12 @@ export const Navbar = observer(() => {
           <option value="russian">Русский 🇷🇺</option>
           <option value="english">English 🇺🇸</option>
         </select>
-        <NavLink to="/profile" className="py-4 mr-2 hover:bg-gray-100 px-3">
+        <NavLink to="/profile" className="py-4 mr-2 hover:bg-gray-200 px-3">
           {translation.translate(TRANSLATION_KEY.PROFILE, languageOfApp)}
         </NavLink>
         <button
           onClick={logoutHandle}
-          className="py-4 px-3 mr-1 hover:bg-gray-100"
+          className="py-4 px-3 mr-1 hover:bg-gray-200"
         >
           {translation.translate(TRANSLATION_KEY.EXIT, languageOfApp)}
         </button>

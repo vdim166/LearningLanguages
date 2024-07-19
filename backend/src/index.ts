@@ -1,7 +1,8 @@
 import { Elysia } from "elysia"
 import { cors } from "@elysiajs/cors"
 import dotenv from "dotenv"
-import { router } from "./router"
+import { userRouter } from "./router/user"
+import { appRouter } from "./router/app"
 
 // TODO:error handling
 
@@ -20,7 +21,8 @@ const app = new Elysia()
   .onError(({ code, error }) => {
     return new Response(error.message.toString())
   })
-  .group("/api", (app) => app.use(router))
+  .group("/api", (app) => app.use(userRouter))
+  .group("/api", (app) => app.use(appRouter))
 
 app.listen(PORT, () => {
   console.log(`🦊 Elysia is running at port ${PORT}`)

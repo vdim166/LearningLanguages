@@ -13,7 +13,7 @@ const refreshSchema = {
   }),
 }
 
-export const router = new Elysia()
+export const userRouter = new Elysia()
 
   .post("/registration", userController.registration, userSchema)
   .post("/login", userController.login, userSchema)

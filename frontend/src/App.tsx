@@ -2,6 +2,7 @@ import { observer } from "mobx-react-lite"
 import { useEffect } from "react"
 import authStore from "./store/AuthStore"
 import AppRouter from "./components/AppRouter"
+import { Loading } from "./components/Loading"
 
 // TODO: login errors
 
@@ -15,7 +16,7 @@ export const App = () => {
   }, [])
 
   if (isLoading) {
-    return <div>Loading...</div>
+    return <Loading />
   }
 
   return (

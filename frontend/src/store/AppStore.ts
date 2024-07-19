@@ -3,9 +3,14 @@ import { LANGUAGES } from "../types/Languages"
 import { PAGES_ENUM } from "../types/Pages"
 
 class AppStore {
-  language: LANGUAGES = LANGUAGES.RUSSIAN
+  language: LANGUAGES = LANGUAGES.ENGLISH
   page: PAGES_ENUM = PAGES_ENUM.LETS_LEARN
-  languageOfApp: LANGUAGES = LANGUAGES.ENGLISH
+  languageOfApp: LANGUAGES = LANGUAGES.RUSSIAN
+
+  currentLesson = {
+    [LANGUAGES.ENGLISH]: 1,
+    [LANGUAGES.RUSSIAN]: 1,
+  }
 
   constructor() {
     makeAutoObservable(this)
@@ -21,6 +26,9 @@ class AppStore {
 
   setLanguageOfApp = (language: LANGUAGES) => {
     this.languageOfApp = language
+  }
+  setCurrentLesson = (language: LANGUAGES, lesson: number) => {
+    this.currentLesson[language] = lesson
   }
 }
 
